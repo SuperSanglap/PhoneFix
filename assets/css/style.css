@@ -203,6 +203,7 @@ samp {
 
 img {
   pointer-events: none;
+  user-select: none;
 }
 
 pre {
