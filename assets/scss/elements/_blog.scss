@@ -1,0 +1,160 @@
+/*---------------------
+    Axil Blog Styles 
+----------------------*/
+
+.axil-blog {
+    position: relative; 
+    @media #{$md-layout} {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    @media #{$sm-layout} {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 360px;
+        z-index: 2;
+        @media #{$md-layout} {
+            position: static;
+            top: auto;
+            transform: inherit;
+            width: 100%;
+        }
+        @media #{$sm-layout} {
+            position: static;
+            top: auto;
+            transform: inherit;
+            width: 100%;
+        }
+        .content-wrap {
+            padding: 40px 30px;
+            transition: 0.4s;
+            position: relative;
+            z-index: 2;
+            @media #{$sm-layout} {
+                padding: 25px 20px;
+            }
+            &::after{
+                background: #ffffff;
+                position: absolute;
+                content: "";
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                box-shadow: 0 0 1px transparent;
+            }
+            &::before{
+                width: 92%;
+                height: 92%;
+                left: -20px;
+                bottom: -20px;
+                background:  rgba(0, 2, 72, 0.1);
+                content: "";
+                position: absolute;
+                z-index: -1;
+                transform-style: preserve-3d;
+                transform: rotateY(-10deg);
+                filter: blur(50px);
+                opacity: 0;
+                transition: 0.3s;
+                @media #{$sm-layout} {
+                    display: none;
+                }
+            }
+        }
+        .inner {
+            span {
+                &.category {
+                    display: inline-block;
+                    height: 26px;
+                    background: #5BCC9F;
+                    font-size: 15px;
+                    color: #F6F5FA;
+                    padding: 0 10px;
+                    line-height: 26px;
+                    margin-bottom: 20px;
+                    @media #{$sm-layout} {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            h5{
+                &.title{
+                    margin-bottom: 20px;
+                    @media #{$sm-layout} {
+                        margin-bottom: 8px;
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        
+    }
+    .thumbnail {
+        text-align: right;
+        .image {
+            img {
+                width: 410px;
+
+                @media #{$md-layout} {
+                    width: 100%;
+                }
+                @media #{$sm-layout} {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &.active  {
+        .content {
+            .content-wrap {
+                padding-left: 40px;
+
+                @media #{$md-layout} {
+                    padding-left: 30px;
+                }
+                
+                @media #{$sm-layout} {
+                    padding-left: 30px;
+                }
+                &::after {
+                    transform: perspective(300px) rotateY(-5deg);
+                    @media #{$md-layout} {
+                        transform: perspective(0px) rotateY(0deg);
+                    }
+                    @media #{$sm-layout} {
+                        transform: perspective(0px) rotateY(0deg);
+                    }
+                }
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &:hover {
+        .content {
+            .inner {
+                h5 {
+                    &.title {
+                        a {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+            
+        } 
+    }
+}
