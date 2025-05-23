@@ -23518,4 +23518,8 @@ body.active-dark-mode .portfolio-slider .thumbnail img.dark-image {
   display: block;
 }
 
+.brand img {
+  max-width: 70px;
+}
+
 /*# sourceMappingURL=style.css.map */
