@@ -23522,4 +23522,8 @@ body.active-dark-mode .portfolio-slider .thumbnail img.dark-image {
   max-width: 70px;
 }
 
+.paralax-image img {
+  max-width: 400px;
+}
+
 /*# sourceMappingURL=style.css.map */
