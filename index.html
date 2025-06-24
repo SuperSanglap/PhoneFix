@@ -72,7 +72,8 @@
                                 <a href="/">
                                     <div class="row">
                                         <div class="col-3 mx-2">
-                                            <img src="assets/images/logo/phonefix.png" alt="" style="max-width: 55px;">
+                                            <img src="https://placehold.co/55x55.png" alt="Logo"
+                                                style="max-width: 55px;">
                                         </div>
                                         <div class="col-8">
                                             <h4 class="my-0">PhoneFix</h4>
@@ -126,7 +127,7 @@
                         <a href="/">
                             <div class="row">
                                 <div class="col-3 mx-2">
-                                    <img src="assets/images/logo/phonefix.png" alt="" style="max-width: 45px;">
+                                    <img src="https://placehold.co/55x55.png" alt="Logo" style="max-width: 45px;">
                                 </div>
                                 <div class="col-8">
                                     <h4 class="my-0">PhoneFix</h4>
@@ -653,24 +654,24 @@
                                 <!-- Start Contact Form -->
                                 <div class="axil-contact-form contact-form-style-1">
                                     <h3 class="title">Get a free quote now</h3>
-                                    <form action="#">
+                                    <form method="POST" action="https://formspree.io/f/xgvadgpw">
                                         <div class="form-group">
-                                            <input type="text">
+                                            <input type="text" name="name">
                                             <label>Name</label>
                                             <span class="focus-border"></span>
                                         </div>
                                         <div class="form-group">
-                                            <input type="tel">
+                                            <input type="tel" name="tel">
                                             <label>Phone</label>
                                             <span class="focus-border"></span>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email">
+                                            <input type="email" name="email">
                                             <label>Email</label>
                                             <span class="focus-border"></span>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text">
+                                            <input type="text" name="message">
                                             <label>Message</label>
                                             <span class="focus-border"></span>
                                         </div>
@@ -1261,24 +1262,24 @@
                                 <div class="axil-contact-form contact-form-style-1">
                                     <h3 class="title mb-4">Get a Free Support Over Phone</h3>
 
-                                    <form id="contact-form" method="POST" action="mail.php">
+                                    <form id="contact-form" method="POST" action="https://formspree.io/f/xgvadgpw">
                                         <div class="form-group">
-                                            <input name="con_name" type="text">
+                                            <input name="name" type="text">
                                             <label>Name</label>
                                             <span class="focus-border"></span>
                                         </div>
                                         <div class="form-group">
-                                            <input name="con_email" type="email">
+                                            <input name="email" type="email">
                                             <label>Email</label>
                                             <span class="focus-border"></span>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text">
+                                            <input type="tel" name="phone">
                                             <label>Phone</label>
                                             <span class="focus-border"></span>
                                         </div>
                                         <div class="form-group">
-                                            <textarea name="con_message"></textarea>
+                                            <textarea name="message"></textarea>
                                             <label>Your message</label>
                                             <span class="focus-border"></span>
                                         </div>
@@ -1384,9 +1385,11 @@
                                     <p>Recieve all the offers, and rewards as soon as possible,<br>We will surely not
                                         spam you.</p>
                                     <div class="axil-newsletter">
-                                        <form class="newsletter-form" action="#">
-                                            <input type="email" placeholder="Email">
-                                            <a class="axil-button btn-transparent" href="#"><span
+                                        <form id="newsletter" class="newsletter-form" method="POST"
+                                            action="https://formspree.io/f/xgvadgpw">
+                                            <input type="email" name="email" placeholder="Email">
+                                            <a class="axil-button btn-transparent" href="javascript:{}"
+                                                onclick="document.getElementById('newsletter').submit();"><span
                                                     class="button-text">Subscribe</span><span
                                                     class="button-icon"></span></a>
                                         </form>
